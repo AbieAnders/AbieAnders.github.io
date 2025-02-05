@@ -23,7 +23,8 @@ const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 const material = new THREE.MeshStandardMaterial({ color: 0xFF6347, wireframe: true });  // Light source is required for this particular material.
 const torus = new THREE.Mesh(geometry, material);
 
-scene.add(torus);
+//scene.add(torus);
+
 // Since a light source is needed,
 // PointLight is used to light up specific areas while AmbientLight is used to light up the whole thing.
 // Hence both are not needed at the same time.
