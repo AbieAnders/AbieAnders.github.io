@@ -56,19 +56,20 @@ Array(200).fill().forEach(addStar);
 
 // Texture mapping is used to display images or other media.\
 //Background
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+//Adding / to the path may break it for local runs, but may fix it for github pages.
+const spaceTexture = new THREE.TextureLoader().load('/space.jpg');
 scene.background = spaceTexture;
 
 //Me
-const abieTexture = new THREE.TextureLoader().load('Abie Anders Passport Sized Photo 80kb - 2024.jpg');
+const abieTexture = new THREE.TextureLoader().load('/Abie Anders Passport Sized Photo 80kb - 2024.jpg');
 const abie = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: abieTexture }));
 abie.position.z = -5;
 abie.position.x = 2;
 scene.add(abie);
 
 //Moon
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg');// !!!Not Working!!!
+const moonTexture = new THREE.TextureLoader().load('/moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('/normal.jpg');// !!!Not Working!!!
 const moon = new THREE.Mesh(new THREE.SphereGeometry(3, 32, 32), new THREE.MeshStandardMaterial({ map: moonTexture, normalMap: normalTexture, }));
 moon.position.z = 30;
 moon.position.setX(-10);
